@@ -1,0 +1,282 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.account-page, .division {
+    height: 100%;
+    margin: 0;
+}
+
+.division {
+    display: flex;
+}
+
+.logo {
+    background-color: #180615dc;
+    padding: 0; /* Remove padding to avoid extra space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.right {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in height calculation */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* Title and Subtitle */
+.title {
+    font-size: 48px; /* Adjust as needed */
+    margin-bottom: 16px; /* Space below title */
+    text-align: center; /* Center-align text */
+}
+
+.subtitle {
+    font-size: 20px; /* Adjust as needed */
+    margin-bottom: 15px; /* Space below subtitle */
+    text-align: center; /* Center-align text */
+}
+
+/* Forgot Password */
+.forgotpass {
+    text-align: right;
+    margin-bottom: 10px; /* Space between link and form */
+}
+
+.forgotpass a {
+    color: inherit; /* Use current text color */
+    text-decoration: none; /* Remove underline */
+    font-style: italic;
+}
+
+.forgotpass a:hover {
+    text-decoration: underline; /* Optional: add underline on hover */
+}
+
+.redirect {
+    text-align: center;
+    margin-bottom: 10px; /* Space between link and form */
+}
+
+.redirect a {
+    color: inherit; /* Use current text color */
+    text-decoration: none; /* Remove underline */
+    font-style: italic;
+}
+
+.redirect a:hover {
+    text-decoration: underline; /* Optional: add underline on hover */
+}
+
+/* Form Styling */
+.form-table {
+    width: 100%;
+}
+
+
+
+/* CSS Style for Homepage*/
+
+.homepage {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Rubik", sans-serif;
+}
+
+.nav-bar {
+    background-color: #180615dc;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    padding-right: 15px;
+}
+
+.logo-img {
+    margin-left: 10vw;
+}
+
+
+section.hero {
+    background-color: #290c24dc;
+    border-radius: 0 0 200px 200px;
+}
+
+section.hero .banner {
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+}
+
+.banner {
+    padding-top: 15px;
+}
+
+.buttons {
+    padding-top: 5vh;
+}
+
+hr.custom {
+    width: 25%;  /* Length of the line */
+    height: 4px;  /* Thickness of the line */
+    background-color: #290c24dc;  /* Color of the line */
+    border: none;  /* Remove default border */
+    margin-left: auto;  /* Center the line */
+    margin-right: auto;  /* Center the line */
+}
+
+.description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.buttons .btn {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.aboutapp {
+    background-color: #f7f7edc4;
+}
+
+.about {
+    font-family: "Rubik", sans-serif;
+    font-size: 30px;
+}
+
+.description {
+    text-align: justify;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.contact, .contact-page {
+    font-family: "Rubik", sans-serif;
+    width: 100%;
+}
+
+.contact-logo {
+    justify-content: left;
+    align-items: left;
+    width: 100px;
+}
+
+.logo-col {
+    justify-content: left;
+    align-items: left;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.logo-desc {
+    font-size: 13px;
+    line-height: 1;
+}
+
+.foot {
+    background-color: #180615dc;
+    color: aliceblue;
+    font-size: 13px;
+}
+
+
+/*
+.container {
+    display: grid;
+    grid-template-rows: 100vw 100vh;
+    grid-template-columns: 100vh 100vh;
+}
+.main-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.hero-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15vh;
+    box-sizing: border-box;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center; 
+    justify-content: center;
+    border-radius: 40px; 
+    width: 75vw;
+    max-height: 75vh;
+    background-color: #f9d5a7; 
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.hero-text {
+    align-items: center;
+    padding: 10px; 
+}
+
+.hero-img-box {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.hero-img {
+    position: center;
+    padding-bottom: 15vh 15vh;
+}
+
+.footer {
+    background-color: #0764c2; 
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: 700px) {
+    .footer {
+        font-size: 14px;
+    }
+
+    .hero-img {
+        align-items: center;
+        height: 25vw;
+        font-weight: 20px;
+    }
+}
+
+@media (max-height: 1000px) {
+    .footer {
+        font-size: 14px;
+    }
+}*/

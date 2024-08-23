@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        /* Responsive Adjustments */
+        @media (max-width: 767px) and (min-height:660px){
+            .division {
+                display: flex;
+                flex-direction: column;
+                height: 100vh; /* Ensure full height on small screens */
+            }
+
+            .panel {
+                flex: 1; /* Make both panels take equal height */
+                padding: 0;
+                margin: 0;
+            }
+
+            .logo {
+                max-height: 160px;
+                height: auto;
+            }
+
+            .logo-img {
+                max-height: 140px;
+            }
+
+            .right {
+                padding: 10px;
+                margin: 0;
+                height: auto;
+            }
+
+            .submit {
+                width: 100%;
+            }
+
+            .logo {
+                height: 150px; /* Adjust to fit content */
+            }
+
+            .logo-img {
+                max-height: 140px; /* Adjust to fit content */
+            }
+        }
+
+        /* Adjustments for very small devices */
+        @media (max-width: 767px) and (max-height: 1000px) {
+            .right {
+                padding: 10px;
+                margin-bottom: 0;
+                height: auto; /* Adjust height to fit content */
+            }
+
+            .title {
+                font-size: 50px;
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            .form-label {
+                padding-top: 10px;
+            }
+
+            .logo {
+                height: 150px; /* Adjust to fit content */
+            }
+
+            .logo-img {
+                max-height: 140px; /* Adjust to fit content */
+            }
+        }
+    </style>
+    <title>Diaria | Sign-up</title>
+</head>
+<body>
+    <div class="container-fluid vh-100 account-page">
+        <div class="row h-100 division">
+            <!-- Left Panel (Logo) -->
+            <div class="panel col-md-6 d-flex justify-content-center align-items-center text-white logo">
+                <img src="logo.png" alt="Logo" class="img-fluid logo-img" style="max-width: 500px;">
+            </div>
+            <!-- Right Panel (Login Form) -->
+            <div class="panel col-md-6 d-flex justify-content-center align-items-center right">
+                <div class="w-75">
+                    <h1 class="title text-weight-400 text-size-28 half-margin-bottom decorative_bottom_line">Welcome</h1>
+                    <h4 class="subtitle text-weight-300 text-size-16">
+                        Please create an account</h4> <br>
+                      <form id="loginForm" method="post" class="form-table">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="email" placeholder="Email or Phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        </div>
+                        <p class="forgotpass"><a href="">Forgot Password?</a></p>
+                        <button id="signup" onclick="handleSignup()" type="button" class="btn btn-primary w-50 submit">Signup</button>                        
+                    </form><br><br>
+                    <p class="redirect"> Have an account? <a href="login.html">Log-in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
